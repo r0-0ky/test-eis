@@ -1,0 +1,21 @@
+.delete-button {
+  outline: none;
+  border: none;
+  background: #fee3e3 url('../../images/for-delete-button/trash.svg') center
+    no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  visibility: hidden;
+  transition: background 0.3s;
+}
+
+tr:hover .delete-button {
+  visibility: visible;
+}
+
+.delete-button:hover {
+  background: #fed7d7 url('../../images/for-delete-button/trash-hover.svg')
+    center no-repeat;
+}

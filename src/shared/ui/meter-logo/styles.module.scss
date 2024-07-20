@@ -1,0 +1,27 @@
+.meter-logo_cold::before {
+  content: '';
+  background: url('../../images/for-meter-logo/cold-water.svg') center no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.meter-logo_cold {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meter-logo_hot::before {
+  content: '';
+  background: url('../../images/for-meter-logo/hot-water.svg') center no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.meter-logo_hot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

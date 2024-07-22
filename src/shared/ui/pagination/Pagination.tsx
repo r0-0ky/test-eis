@@ -98,7 +98,7 @@ export const Pagination: React.FC<typePaginationProps> = observer((props) => {
             key={index}
             className={cn(
               classes['pagination__number-button'],
-              item === activePage && classes['pagination__number-button_active']
+              item == activePage && classes['pagination__number-button_active']
             )}
           >
             {item}

@@ -11,9 +11,9 @@ export const PaginationModel = t
       stroe.currentPage = currentPage;
     },
     setPagesArray(pagesArray: number[]) {
-      stroe.pagesArray = pagesArray;
+      stroe.pagesArray.replace(pagesArray);
     },
     setVisiblePages(visiblePages: number[]) {
-      stroe.visiblePages = visiblePages;
+      stroe.visiblePages.replace(visiblePages);
     },
   }));

@@ -8,7 +8,7 @@
   border-radius: 8px;
   cursor: pointer;
   visibility: hidden;
-  transition: background 0.3s;
+  transition: background 0.2s;
 }
 
 tr:hover .delete-button {
@@ -17,5 +17,16 @@ tr:hover .delete-button {
 
 .delete-button:hover {
   background: #fed7d7 url('../../images/for-delete-button/trash-hover.svg')
+    center no-repeat;
+}
+
+.delete-button_disabled {
+  background: #f2f5f8 url('../../images/for-delete-button/trash-disabled.svg')
+    center no-repeat;
+  visibility: visible;
+}
+
+.delete-button_disabled:hover {
+  background: #f2f5f8 url('../../images/for-delete-button/trash-disabled.svg')
     center no-repeat;
 }

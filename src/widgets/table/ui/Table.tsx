@@ -1,6 +1,7 @@
 import { TableProps } from './types';
 import cn from 'classnames';
 import classes from './styles.module.scss';
+import buttonClasses from '../../../shared/ui/delete-button/styles.module.scss';
 import { Pagination } from '../../../shared/ui/pagination';
 import { DeleteButton } from '../../../shared/ui/delete-button';
 import { observer } from 'mobx-react-lite';
@@ -9,6 +10,13 @@ import { useStrore } from '../../../app/store';
 export const Table: React.FC<TableProps> = observer(
   ({ defaultColumns, title, handleDelete }) => {
     const rootStore = useStrore();
+
+    const handleClick = (e: React.MouseEvent, id: string) => {
+      (e.target as HTMLElement).className +=
+        ` ${buttonClasses['delete-button_disabled']}`;
+      (e.target as HTMLButtonElement).disabled = true;
+      handleDelete(id);
+    };
 
     return (
       <section className={cn(classes.wrapper)}>
@@ -46,7 +54,11 @@ export const Table: React.FC<TableProps> = observer(
                       )
                   )}
                   <td className={cn(classes.table__text)}>
-                    <DeleteButton handleClick={() => handleDelete(row.id)} />
+                    <DeleteButton
+                      handleClick={(e: React.MouseEvent) =>
+                        handleClick(e, row.id)
+                      }
+                    />
                   </td>
                 </tr>
               ))}

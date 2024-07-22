@@ -1,3 +1,3 @@
 export interface isHoveredProps {
-  handleClick: () => void;
+  handleClick: (e: React.MouseEvent) => void;
 }

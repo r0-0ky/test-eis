@@ -14,6 +14,7 @@ export const useMeters = () => {
             const areas = localStorage.getItem('savedAreas');
             if (areas !== null) {
               const req = JSON.parse(areas);
+              // Оптимизация запросов
               if (item.area.id in req) {
                 return Promise.resolve(req[item.area.id]);
               } else {
